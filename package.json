@@ -1,0 +1,37 @@
+{
+  "name": "material-dashboard-pro-lib",
+  "version": "1.8.0",
+  "description": "material-dashboard-pro-react (by Creative-Tim) converted to the library of reusable components",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "react",
+    "material",
+    "pro",
+    "components"
+  ],
+  "author": "Yuri Tymoshchuk",
+  "dependencies": {
+    "@material-ui/core": "4.3.2",
+    "@material-ui/icons": "4.2.1",
+    "chartist": "0.10.1",
+    "perfect-scrollbar": "1.4.0",
+    "react": "16.9.0",
+    "react-big-calendar": "0.22.0",
+    "react-bootstrap-sweetalert": "4.4.1",
+    "react-chartist": "0.13.3",
+    "react-datetime": "2.16.3",
+    "react-dom": "16.9.0",
+    "react-jvectormap": "0.0.12",
+    "react-router-dom": "5.0.1",
+    "react-swipeable-views": "0.13.3",
+    "react-table": "6.10.0",
+    "react-tagsinput": "3.19.0"
+  },
+  "devDependencies": {
+    "webpack": "^4.42.0",
+    "webpack-cli": "^3.3.11"
+  }
+}
