@@ -1,44 +1,25 @@
 const path = require('path');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
-    entry: path.join(__dirname, "src/index.js"), // webpack entry point. Module to start building dependency graph
+    entry: path.resolve(__dirname, './src/index.js'),
     output: {
-        path: __dirname + '/build/my-lib',
+        path: path.resolve(__dirname, './build'),
         filename: 'index.js',
-        libraryTarget: 'commonjs2',
-        // publicPath: '/', // public URL of the output directory when referenced in a browser
-        // libraryTarget: 'umd',
-        // umdNamedDefine: true
+        library: '',
+        libraryTarget: 'commonjs',
     },
-    module: {  // defined file patterns and their loaders
+    module: {
         rules: [
             {
                 test: /\.(js)$/,
-                use: "babel-loader",
-                exclude: /node_modules/
+                loader: "babel-loader",
+                exclude: /node_modules/,
+                options: {
+                    presets: ['@babel/preset-env', '@babel/preset-react']
+                }
             },
-/*            {
-                test: /\.css$/,
-                use: ["style-loader", "css-loader"]
-            }*/
         ]
     },
-    resolve: {
-        extensions: [".js"]
-    },
-    externals: {
-        // Don't bundle react or react-dom
-        react: {
-            commonjs: "react",
-            commonjs2: "react",
-            amd: "React",
-            root: "React"
-        },
-        "react-dom": {
-            commonjs: "react-dom",
-            commonjs2: "react-dom",
-            amd: "ReactDOM",
-            root: "ReactDOM"
-        }
-    }
+    externals: [nodeExternals()]
 };
