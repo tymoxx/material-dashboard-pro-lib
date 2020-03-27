@@ -1,6 +1,6 @@
 {
   "name": "my-lib",
-  "version": "1.8.0",
+  "version": "1.8.1",
   "description": "material-dashboard-pro-react (by Creative-Tim) converted to the library of reusable components",
   "private": true,
   "main": "./build/index.js",
